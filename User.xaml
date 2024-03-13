@@ -24,20 +24,20 @@
 
             </Rectangle>
         </Border>
-        <TextBlock HorizontalAlignment="Left" Margin="106,0,0,0" TextWrapping="Wrap" Text="Login" VerticalAlignment="Center" x:Name="recordloginTextBlock"/>
+        <TextBlock HorizontalAlignment="Left" TextTrimming="CharacterEllipsis"  MaxWidth="100" Margin="106,0,0,0" TextWrapping="Wrap" Text="Login" VerticalAlignment="Center" x:Name="recordloginTextBlock"/>
         <TextBlock HorizontalAlignment="Left" Margin="237,0,0,0" TextWrapping="Wrap" Text="Birthday" VerticalAlignment="Center" x:Name="recordbirthdayTextBlock"/>
-        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Birthplace" VerticalAlignment="Center" x:Name="recordbirthplaceTextBlock"/>
-        <Button  HorizontalAlignment="Left" Margin="631,0,0,0" VerticalAlignment="Center" x:Name="messageUserButton" Width="30" Height="30" Style="{StaticResource MaterialDesignIconButton}" Click="messageUserButton_Click">
+        <TextBlock  TextTrimming="CharacterEllipsis" MaxWidth="100" TextAlignment="Center" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Birthplace" VerticalAlignment="Center" x:Name="recordbirthplaceTextBlock" Margin="407,0,0,0"/>
+        <Button  HorizontalAlignment="Left" Margin="650,0,0,0" VerticalAlignment="Center" x:Name="messageUserButton" Width="30" Height="30" Style="{StaticResource MaterialDesignIconButton}" Click="messageUserButton_Click">
             <materialDesign:PackIcon Kind="Chat"  
                          Width="30" Height="30"  
                          Foreground="#AF2B1E"/>
         </Button>
-        <Button  HorizontalAlignment="Left" Margin="550,0,0,0" VerticalAlignment="Center" x:Name="openUserButton" Width="30" Height="30" Style="{StaticResource MaterialDesignIconButton}" Click="openUserButton_Click">
+        <Button  HorizontalAlignment="Left" Margin="568,0,0,0" VerticalAlignment="Center" x:Name="openUserButton" Width="30" Height="30" Style="{StaticResource MaterialDesignIconButton}" Click="openUserButton_Click">
             <materialDesign:PackIcon Kind="OpenInNew"  
                          Width="30" Height="30"  
                          Foreground="#AF2B1E"/>
         </Button>
-        <Button  HorizontalAlignment="Left" Margin="715,0,0,0" VerticalAlignment="Center" x:Name="editUserButton"  Width="30" Height="30" Click="editUserButton_Click" Style="{StaticResource MaterialDesignIconButton}">
+        <Button  HorizontalAlignment="Left" Margin="725,0,0,0" VerticalAlignment="Center" x:Name="editUserButton"  Width="30" Height="30" Click="editUserButton_Click" Style="{StaticResource MaterialDesignIconButton}">
             <materialDesign:PackIcon Kind="Edit"  
                          Width="30" Height="30"  
                          Foreground="#AF2B1E"/>

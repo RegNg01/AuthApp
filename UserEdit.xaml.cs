@@ -100,11 +100,12 @@ namespace WpfApp1
                 await auth.client.SetAsync("users/" + regloginTextBox.Text.Trim(), userData);
                 MessageBox.Show("Добавлен пользователь " + regloginTextBox.Text.Trim());
                 regloginTextBox.Text = "";
-                  regpasswordTextBox = "";
-                 regbirthplaceTextBox = "";
+                  regpasswordTextBox.Text = "";
+                 regbirthplaceTextBox.Text = "";
                 regbirthdayDatePicker.Text = "";
                 regstudyTextBox.Text = "";
                   regbioTextBox.Text = "";
+                regimage.ImageSource = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory+"/img.jpg"));
             } 
             catch (Exception ex) { MessageBox.Show(ex.Message); }
             addButton.IsEnabled = true;
@@ -186,8 +187,9 @@ namespace WpfApp1
             }
             AdminWindow adminWindow = Application.Current.Windows.OfType<AdminWindow>().FirstOrDefault();
             if (adminWindow != null)
-            { 
-                adminWindow.LoadUsers("");
+            {
+                 
+                adminWindow.LoadUsers(adminWindow.searchTextBox.Text);
             } 
             this.Close();
         }

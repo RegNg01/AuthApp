@@ -92,19 +92,19 @@
               VerticalAlignment="Top" 
               x:Name="userbirthplaceTextBlock" Margin="20,0,0,0"  />
             </StackPanel>
-            <StackPanel Orientation="Horizontal" Margin="271,181,50,247" >
+            <StackPanel Orientation="Horizontal" Margin="271,181,50,218" >
                 <TextBlock 
              Text="Место учебы:"
              HorizontalAlignment="Left"   
              VerticalAlignment="Top" />
                 <TextBlock 
               Text="study"
-              HorizontalAlignment="Left"   
+                    TextWrapping="Wrap"   
               VerticalAlignment="Top" 
-              x:Name="userstudyTextBlock" Margin="20,0,0,0"  />
+              x:Name="userstudyTextBlock" Margin="20,0,0,0" Height="59" Width="300"  />
             </StackPanel>
-            <Expander Style="{StaticResource MaterialDesignExpander}"   Header="Биография" Margin="271,216,0,0" HorizontalAlignment="Left" materialDesign:ExpanderAssist.HorizontalHeaderPadding="0,5,5,5" materialDesign:ExpanderAssist.HeaderFontSize="18" x:Name="bioExpander" VerticalAlignment="Top" Collapsed="Expander_Collapsed" >
-                <TextBox Style="{StaticResource MaterialDesignOutlinedTextBox}" BorderBrush="{StaticResource MaterialDesignDivider}" Width="450" MaxLength="500" Background="#FFEBF5FF" Height="130" FontSize="16" x:Name="userbioTextBox" Padding="5" KeyDown="userbioTextBox_KeyDown" TextWrapping="Wrap"/>
+            <Expander Style="{StaticResource MaterialDesignExpander}"   Header="Биография" Margin="271,240,0,0" HorizontalAlignment="Left" materialDesign:ExpanderAssist.HorizontalHeaderPadding="0,5,5,5" materialDesign:ExpanderAssist.HeaderFontSize="18" x:Name="bioExpander" VerticalAlignment="Top" Collapsed="Expander_Collapsed" >
+                <TextBox Style="{StaticResource MaterialDesignOutlinedTextBox}" BorderBrush="{StaticResource MaterialDesignDivider}" Width="450" MaxLength="500" Background="#FFEBF5FF" Height="101" FontSize="16" x:Name="userbioTextBox" Padding="5" KeyDown="userbioTextBox_KeyDown" TextWrapping="Wrap"/>
             </Expander>
 
             <Button  

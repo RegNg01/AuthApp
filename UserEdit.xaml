@@ -72,7 +72,7 @@
                         materialDesign:HintAssist.Hint="Место рождения"
                         Width="300"
                         x:Name="regbirthplaceTextBox" 
-                        MaxLength="50"/>
+                        MaxLength="20"/>
                     <TextBox    Margin="0 10 0 0"
                          materialDesign:HintAssist.Foreground="#AF2B1E" 
                         Style="{StaticResource MaterialDesignFloatingHintTextBox}"
