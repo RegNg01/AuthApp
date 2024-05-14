@@ -78,7 +78,7 @@ namespace WpfApp1
         {
             MessageBox.Show("Удален "+recordloginTextBlock.Text);
            
-            FirebaseResponse response = await auth.client.GetAsync("users/" + recordloginTextBlock.Text); https://stackoverflow.com/questions/49476592/check-if-wpf-window-is-open
+            FirebaseResponse response = await auth.client.GetAsync("users/" + recordloginTextBlock.Text);
             UserData userData = response.ResultAs<UserData>();
             FirebaseStorage storage = new FirebaseStorage("authapp-60a49.appspot.com");
             try
