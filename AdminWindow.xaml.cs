@@ -83,7 +83,7 @@ namespace WpfApp1
             this.Close();
         }
 
-        //private void UsersListView_MouseDoubleClick(object sender, MouseButtonEventArgs e) https://copyprogramming.com/howto/c-listview-how-to-handle-the-mouse-click-event-on-a-listviewitem
+        //private void UsersListView_MouseDoubleClick(object sender, MouseButtonEventArgs e) 
         //{
         //    ListViewItem item = UsersListView.SelectedItem as ListViewItem;
         //    MessageBox.Show(item.Name);
@@ -120,7 +120,7 @@ namespace WpfApp1
                 historyWindow.Show();
              
         }
-        private async Task<bool> FileExists(string url) //асинхронный
+        private async Task<bool> FileExists(string url) 
         {
             try
             {
