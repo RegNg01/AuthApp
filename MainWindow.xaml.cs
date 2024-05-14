@@ -108,7 +108,7 @@ namespace WpfApp1
             catch (Exception ex) { MessageBox.Show(ex.Message); }
             enterButton.IsEnabled=true;
         }
-        private async Task<bool> FileExists(string url) //асинхронный
+        private async Task<bool> FileExists(string url) 
         {
             try
             {
