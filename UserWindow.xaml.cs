@@ -163,18 +163,26 @@ namespace WpfApp1
             }
         }
 
-        private async void Expander_Collapsed(object sender, RoutedEventArgs e)
-        {
-            await auth.client.SetAsync("users/" + userloginTextBlock.Text + "/bio", userbioTextBox.Text);
-        }
+       private async void Expander_Collapsed(object sender, RoutedEventArgs e)
+{
+    FirebaseResponse response = await auth.client.GetAsync("users/" + userloginTextBlock.Text);
+    UserData userData = response.ResultAs<UserData>();
+    if (userData != null)
+        await auth.client.SetAsync("users/" + userloginTextBlock.Text + "/bio", userbioTextBox.Text);
+    else MessageBox.Show("Пользователь не существует");
+}
 
-        private async void userbioTextBox_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.Key == Key.Enter)
-            {
-                await auth.client.SetAsync("users/" + userloginTextBlock.Text + "/bio", userbioTextBox.Text);
-            }
-        }
+private async void userbioTextBox_KeyDown(object sender, KeyEventArgs e)
+{
+    if (e.Key == Key.Enter)
+    {
+        FirebaseResponse response = await auth.client.GetAsync("users/" + userloginTextBlock.Text);
+        UserData userData = response.ResultAs<UserData>();
+        if (userData != null)
+            await auth.client.SetAsync("users/" + userloginTextBlock.Text + "/bio", userbioTextBox.Text);
+        else MessageBox.Show("Пользователь не существует");
+    }
+}
          
 
         private void chatButton_Click(object sender, RoutedEventArgs e)
