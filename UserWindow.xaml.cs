@@ -77,7 +77,7 @@ namespace WpfApp1
 }
         public async void LoadUser()
         {
-            FirebaseResponse response = await auth.client.GetAsync("users/" + login); //исправить
+            FirebaseResponse response = await auth.client.GetAsync("users/" + login); 
             UserData userData = response.ResultAs<UserData>();
             userloginTextBlock.Text = userData.login;
             userbirthdayTextBlock.Text = userData.birthday;
@@ -93,24 +93,7 @@ namespace WpfApp1
             { 
             }
         }
-        //public async void LoadUser(string log)
-        //{
-        //    FirebaseResponse response = await auth.client.GetAsync("users/" + log);  
-        //    UserData userData = response.ResultAs<UserData>();
-        //    userloginTextBlock.Text = userData.login;
-        //    userbirthdayTextBlock.Text = userData.birthday;
-        //    userbirthplaceTextBlock.Text = userData.birthplace;
-        //    userbioTextBox.Text = userData.bio;
-        //    userstudyTextBlock.Text = userData.study;
-        //    try
-        //    {
-        //        if ( await FileExists(userData.image))
-        //            userImage.ImageSource = new BitmapImage(new Uri(userData.image));
-        //    }
-        //    catch
-        //    {
-        //    }
-        //}
+       
         private async void userEditButton_Click(object sender, RoutedEventArgs e)
         { 
             UserEdit userEdit = new UserEdit();
@@ -149,7 +132,7 @@ namespace WpfApp1
             this.Close();
         }
 
-        private async Task<bool> FileExists(string url) //асинхронный
+        private async Task<bool> FileExists(string url) 
         {
             try
             {
