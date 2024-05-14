@@ -49,29 +49,32 @@ namespace WpfApp1
             await auth.client.PushAsync("login_history/", history);
         }
         public string GetAge(int birthyear) {
-            DateTime current = DateTime.Today;
-            int year = current.Year;
-              
-            int age = year - birthyear; 
-            string line="";
-            switch (age % 10)
-            {
-                case 1:
-                    line = " год";
-                    break;
-                case 2:
-                case 3:
-                case 4:
-                    line = " года";
-                    break;
-                default:
-                    line = " лет";
-                    break;
-            } 
-                return age.ToString()+line; 
-            
-            
+        DateTime current = DateTime.Today;
+        int year = current.Year;
+          
+        int age = year - birthyear; 
+        string line="";
+        switch (age % 10)
+        {
+            case 1:
+                line = " год";
+                break;
+            case 2:
+                line = " года";
+                break;
+            case 3:
+                line = " года";
+                break;
+            case 4:
+                line = " года";
+                break;
+            default:
+                line = " лет";
+                break;
         }
+    if (age > 10 && age < 15) line = " лет";
+        return age.ToString()+line; 
+}
         public async void LoadUser()
         {
             FirebaseResponse response = await auth.client.GetAsync("users/" + login); //исправить
