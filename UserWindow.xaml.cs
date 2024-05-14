@@ -214,9 +214,9 @@ private async void userbioTextBox_KeyDown(object sender, KeyEventArgs e)
             this.WindowState = WindowState.Minimized;
         }
 
-        private async void imageEditButton_Click(object sender, RoutedEventArgs e)
+                private async void imageEditButton_Click(object sender, RoutedEventArgs e)
         {
-            FirebaseResponse response = await auth.client.GetAsync("users/" + login); //исправить
+            FirebaseResponse response = await auth.client.GetAsync("users/" + login);  
             UserData userData = response.ResultAs<UserData>();
             string oldImageUrl = userData.image;
             string imageURL = oldImageUrl;
