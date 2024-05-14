@@ -34,7 +34,7 @@ namespace WpfApp1
             auth = new FirebaseAuth();
         }
 
-        public async void messageUserButton_Click(object sender, RoutedEventArgs e)
+            public async void messageUserButton_Click(object sender, RoutedEventArgs e)
         {
             ChatWindow chatWindow = new ChatWindow();
             chatWindow.reciever_login = recordloginTextBlock.Text;
@@ -89,10 +89,10 @@ namespace WpfApp1
             catch { }
             await auth.client.DeleteAsync("users/" + recordloginTextBlock.Text);
             AdminWindow adminWindow = Application.Current.Windows.OfType<AdminWindow>().FirstOrDefault();
-            adminWindow.LoadUsers(""); // ошибка
+            adminWindow.LoadUsers("");  
 
         }
-        private async Task<bool> FileExists(string url) //асинхронный
+        private async Task<bool> FileExists(string url)  
         {
             try
             {
@@ -139,3 +139,4 @@ namespace WpfApp1
         }
     }
 }
+
